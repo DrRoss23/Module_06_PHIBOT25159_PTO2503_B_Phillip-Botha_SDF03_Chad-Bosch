@@ -78,6 +78,11 @@ header {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.4rem;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Enlarge the button slightly on hover */
 }
 
 .btn.profile-edit-btn {
