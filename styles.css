@@ -182,3 +182,45 @@ header {
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 480px) {
+    .profile {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1rem; /* Reduce gap between elements */
+        text-align: center; /* Center-align content */
+    }
+
+    .profile-image {
+        width: 100%; /* Ensure the container scales */
+        max-width: 10rem; /* Limit the maximum width */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .profile-image img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Keep the circular shape */
+        object-fit: cover; /* Ensure the image fits within the container */
+    }
+
+    .profile-user-name {
+        font-size: 2rem; /* Adjust font size for username */
+    }
+
+    .profile-stats ul {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 1rem; /* Add spacing between items */
+        justify-items: center; /* Center-align items */
+    }
+
+    .btn {
+        font-size: 1rem; /* Smaller button text */
+        padding: 0.3rem 0.6rem; /* Adjust button padding */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller grid items */
+        gap: 0.5rem; /* Reduce gap between gallery items */
+    }
+}
