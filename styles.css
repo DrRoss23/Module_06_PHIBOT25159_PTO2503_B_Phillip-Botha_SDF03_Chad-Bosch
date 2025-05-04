@@ -97,12 +97,15 @@ header {
     font-size: 1.8rem;
 }
 
+/* Ensure profile stats always remain in a 3x3 grid */
 .profile-stats ul {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 1rem; /* Space between items */
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-items: center; /* Center-align items */
 }
 
 .profile-stats li {
@@ -192,8 +195,8 @@ header {
 
 @media (max-width: 480px) {
     .profile {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 1rem; /* Reduce gap between elements */
+        grid-template-columns: 1fr 2fr; /* Keep two columns */
+        gap: 0.5rem; /* Further reduce spacing for very small screens */
         text-align: center; /* Center-align content */
     }
 
@@ -215,10 +218,7 @@ header {
     }
 
     .profile-stats ul {
-        display: grid; /* Use grid layout */
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 1rem; /* Add spacing between items */
-        justify-items: center; /* Center-align items */
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns on small screens */
     }
 
     .btn {
@@ -232,15 +232,13 @@ header {
 }
 @media (max-width: 768px) {
     .profile {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr 2fr; /* Keep two columns */
+        gap: 1rem; /* Adjust spacing for smaller screens */
         text-align: center;
     }
 
     .profile-stats ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns on medium screens */
     }
 
     .gallery {
